@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gibson's Nail Studio | Randburg</title>
+    <title>Gibson's Nail Studio | Ferndale Randburg</title>
     <style>
         :root {
             --primary-pink: #d63384;
@@ -14,19 +14,17 @@
 
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg-color); color: #333; }
         
-        /* Full width header */
         header { 
             background: var(--primary-pink); 
             color: white; 
-            padding: 80px 20px; 
+            padding: 60px 20px; 
             text-align: center;
             width: 100%;
         }
-        header h1 { margin: 0; font-size: 3rem; letter-spacing: 2px; text-transform: uppercase; }
-        header p { margin-top: 15px; font-size: 1.2rem; opacity: 0.9; }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; }
+        header p { margin-top: 10px; font-size: 1.1rem; opacity: 0.9; }
         
-        /* Main content area stretching across screen */
-        .main-content { padding: 50px 0; }
+        .main-content { padding: 40px 0; }
 
         .section {
             max-width: 800px;
@@ -37,23 +35,31 @@
         h3 { 
             color: var(--primary-pink); 
             text-transform: uppercase; 
-            font-size: 1.2rem; 
+            font-size: 1.1rem; 
             letter-spacing: 2px; 
             border-bottom: 2px solid var(--primary-pink);
             padding-bottom: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-        /* Bullet list styling */
+        /* Image Styling */
+        .featured-image {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
         .service-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        @media (max-width: 600px) { .service-list { grid-template-columns: 1fr; } } /* Single column on small phones */
+        @media (max-width: 600px) { .service-list { grid-template-columns: 1fr; } }
 
         .service-list li { 
             position: relative; 
             padding: 15px 0 15px 35px; 
-            font-size: 1.1rem; 
+            font-size: 1rem; 
             background: var(--section-bg);
-            margin-bottom: 10px;
             border-radius: 8px;
         }
         .service-list li::before { 
@@ -61,20 +67,19 @@
             color: var(--primary-pink); 
             position: absolute; 
             left: 12px; 
-            font-size: 1.2rem; 
+            font-size: 1.1rem; 
         }
 
-        /* Full width Location strip */
         .location-strip { 
             background: #222; 
             color: white; 
             padding: 40px 20px; 
             text-align: center; 
-            margin: 50px 0;
+            margin: 40px 0;
         }
-        .location-strip strong { color: var(--primary-pink); font-size: 1.4rem; display: block; margin-bottom: 10px; }
+        .location-strip strong { color: var(--primary-pink); font-size: 1.2rem; display: block; margin-bottom: 5px; }
+        .location-strip p { margin: 5px 0; font-size: 1.1rem; }
 
-        /* Full width Contact Section */
         .actions { 
             max-width: 400px; 
             margin: 0 auto; 
@@ -86,18 +91,18 @@
 
         .btn { 
             text-align: center; 
-            padding: 20px; 
+            padding: 18px; 
             border-radius: 50px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: 0.3s; 
         }
-        .btn-call { background: var(--primary-pink); color: white; box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3); }
-        .btn-whatsapp { background: var(--whatsapp-green); color: white; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-        .btn:hover { transform: scale(1.02); }
+        .btn-call { background: var(--primary-pink); color: white; }
+        .btn-whatsapp { background: var(--whatsapp-green); color: white; }
+        .btn:hover { transform: scale(1.02); opacity: 0.9; }
 
-        footer { text-align: center; padding: 60px 20px; background: #f9f9f9; color: #888; font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px 20px; background: #f9f9f9; color: #888; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -108,6 +113,11 @@
 </header>
 
 <div class="main-content">
+    <div class="section">
+        <h3>Our Featured Work</h3>
+       <img src="nail-art.jpg" alt="Nail Art by Gibson" class="featured-image">
+    </div>
+
     <div class="section">
         <h3>Services</h3>
         <ul class="service-list">
@@ -123,8 +133,9 @@
     </div>
 
     <div class="location-strip">
-        <strong>FIND US AT</strong>
-        Randburg, Powersave
+        <strong>NEW LOCATION</strong>
+        <p>171 Bram Fischer Dr, Ferndale</p>
+        <p>Randburg, 2194</p>
     </div>
 
     <div class="section">
@@ -137,7 +148,7 @@
 </div>
 
 <footer>
-    &copy; 2026 Gibson's Nail Studio | Randburg, South Africa
+    &copy; 2026 Gibson's Nail Studio | Ferndale, Randburg
 </footer>
 
 </body>
