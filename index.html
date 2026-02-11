@@ -3,167 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional nail studio in Ferndale Randburg owned by Gibson Murombezi. Specializing in Gel, Acrylics, and custom nail art.">
     <title>Gibson's Nail Studio | Ferndale Randburg</title>
     <style>
         :root {
             --primary-pink: #d63384;
             --whatsapp-green: #25d366;
+            --google-blue: #4285F4;
             --bg-color: #ffffff;
             --section-bg: #fff0f5;
-            --dark-bg: #222;
         }
 
-        body { 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: var(--bg-color); 
-            color: #333; 
-            line-height: 1.6;
-        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg-color); color: #333; line-height: 1.6; }
         
-        /* Full Screen Header */
         header { 
             background: var(--primary-pink); 
             color: white; 
-            padding: 80px 20px; 
+            padding: 70px 20px; 
             text-align: center;
-            width: 100%;
-            box-sizing: border-box;
         }
-        header h1 { margin: 0; font-size: 3rem; letter-spacing: 2px; text-transform: uppercase; }
-        header p { margin-top: 15px; font-size: 1.2rem; opacity: 0.9; }
-        
-        .main-content { padding: 40px 0; }
+        header h1 { margin: 0; font-size: 2.8rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        .section {
-            max-width: 800px;
-            margin: 0 auto 50px auto;
-            padding: 0 20px;
-        }
+        .main-content { padding: 40px 0; }
+        .section { max-width: 800px; margin: 0 auto 40px auto; padding: 0 20px; }
 
         h3 { 
             color: var(--primary-pink); 
             text-transform: uppercase; 
-            font-size: 1.2rem; 
-            letter-spacing: 2px; 
             border-bottom: 2px solid var(--primary-pink);
             padding-bottom: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
-        /* Image Display */
-        .featured-image-container {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        /* Image Display - Corrected for work1.jpg.png */
         .featured-image {
             width: 100%;
             max-width: 600px;
+            display: block;
+            margin: 0 auto 40px auto;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
-        .featured-image:hover {
-            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Bulleted Services List */
-        .service-list { 
-            list-style: none; 
-            padding: 0; 
-            margin: 0; 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 15px; 
-        }
-        @media (max-width: 600px) { 
-            .service-list { grid-template-columns: 1fr; }
-            header h1 { font-size: 2rem; }
-        }
+        .service-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        @media (max-width: 600px) { .service-list { grid-template-columns: 1fr; } }
+        .service-list li { padding: 15px; background: var(--section-bg); border-radius: 8px; }
 
-        .service-list li { 
-            position: relative; 
-            padding: 18px 15px 18px 45px; 
-            background: var(--section-bg);
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        .service-list li::before { 
-            content: "✦"; 
-            color: var(--primary-pink); 
-            position: absolute; 
-            left: 15px; 
-            font-size: 1.3rem; 
-        }
-
-        /* Location Strip */
         .location-strip { 
-            background: var(--dark-bg); 
+            background: #222; 
             color: white; 
-            padding: 60px 20px; 
+            padding: 40px 20px; 
             text-align: center; 
-            margin: 60px 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .location-strip strong { 
-            color: var(--primary-pink); 
-            font-size: 1.5rem; 
-            display: block; 
-            margin-bottom: 15px; 
-            letter-spacing: 1px;
-        }
-        .location-strip p { 
-            margin: 5px 0; 
-            font-size: 1.2rem; 
-            opacity: 0.9;
+            margin: 40px 0;
         }
 
-        /* Booking Buttons */
-        .actions { 
-            max-width: 450px; 
-            margin: 0 auto; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-        }
+        .actions { max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
 
         .btn { 
             text-align: center; 
-            padding: 22px; 
+            padding: 18px; 
             border-radius: 50px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            display: block;
+            transition: 0.3s; 
         }
-        .btn-call { 
-            background: var(--primary-pink); 
-            color: white; 
-            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
-        }
-        .btn-whatsapp { 
-            background: var(--whatsapp-green); 
-            color: white; 
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-        .btn:hover { 
-            transform: translateY(-3px);
-            filter: brightness(1.1);
-        }
+        .btn-call { background: var(--primary-pink); color: white; }
+        .btn-whatsapp { background: var(--whatsapp-green); color: white; }
+        .btn-maps { background: var(--google-blue); color: white; }
+        .btn:hover { transform: scale(1.03); opacity: 0.9; }
 
-        footer { 
-            text-align: center; 
-            padding: 60px 20px; 
-            background: #fdfdfd; 
-            color: #999; 
-            font-size: 0.9rem; 
-            border-top: 1px solid #eee;
-        }
+        footer { text-align: center; padding: 40px; background: #f9f9f9; color: #888; }
     </style>
 </head>
 <body>
@@ -174,47 +82,45 @@
 </header>
 
 <div class="main-content">
-    
     <div class="section">
         <h3>Our Featured Work</h3>
-        <div class="featured-image-container">
-            <img src="Work1.jpg" alt="Nail Art Design by Gibson" class="featured-image">
-        </div>
+        <img src="work1.jpg.png" alt="Nail Art by Gibson" class="featured-image">
     </div>
 
     <div class="section">
-        <h3>Services Offered</h3>
+        <h3>Services</h3>
         <ul class="service-list">
             <li>Full Set Acrylic Tips</li>
             <li>Gel Overlay & Polish</li>
             <li>Professional Manicure</li>
             <li>Relaxing Pedicure</li>
             <li>Custom Nail Art Designs</li>
-            <li>Nail Repair & Maintenance</li>
             <li>Safe Soak-Off Removal</li>
-            <li>Nail Strengthening</li>
         </ul>
     </div>
 
     <div class="location-strip">
-        <strong>VISIT US IN RANDBURG</strong>
-        <p>171 Bram Fischer Dr, Ferndale</p>
-        <p>Randburg, 2194</p>
+        <strong>NEW LOCATION</strong>
+        <p>171 Bram Fischer Dr, Ferndale, Randburg</p>
+        <p>(Near Express Power Save)</p>
     </div>
 
     <div class="section">
-        <h3>Book Your Appointment</h3>
+        <h3>Book or Find Us</h3>
         <div class="actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=171+Bram+Fischer+Dr+Ferndale+Randburg" target="_blank" class="btn btn-maps">
+                📍 OPEN IN GOOGLE MAPS
+            </a>
+            
             <a href="tel:+27672552758" class="btn btn-call">📞 CALL +27 67 255 2758</a>
-            <a href="https://wa.me/27672552758?text=Hi%20Gibson,%20I'd%20like%20to%20book%20a%20nail%20appointment." class="btn btn-whatsapp">💬 MESSAGE ON WHATSAPP</a>
+            
+            <a href="https://wa.me/27672552758" class="btn btn-whatsapp">💬 WHATSAPP MESSAGE</a>
         </div>
     </div>
-
 </div>
 
 <footer>
-    <p>&copy; 2026 Gibson's Nail Studio | Ferndale, Randburg</p>
-    <p>Owned and Operated by Gibson Murombezi</p>
+    © 2026 Gibson's Nail Studio | Ferndale, Randburg
 </footer>
 
 </body>
