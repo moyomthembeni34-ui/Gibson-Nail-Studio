@@ -8,77 +8,72 @@
         :root {
             --primary-pink: #d63384;
             --whatsapp-green: #25d366;
-            --light-bg: #fdf2f8;
+            --bg-color: #fffafc;
         }
 
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: #333; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg-color); color: #444; }
         
-        .container { max-width: 500px; margin: auto; background: white; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .card { max-width: 450px; margin: 20px auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        header { background: var(--primary-pink); color: white; padding: 40px 20px; text-align: center; }
+        header { background: var(--primary-pink); color: white; padding: 50px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2rem; letter-spacing: 1px; }
+        header p { margin-top: 10px; opacity: 0.9; }
         
-        .services { padding: 20px; }
-        .service-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee; }
-        .service-name { font-weight: bold; }
+        .content { padding: 30px; }
         
-        .location { padding: 20px; background: #fff5f8; text-align: center; border-radius: 10px; margin: 20px; }
+        h3 { color: var(--primary-pink); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
 
-        .contact-actions { display: flex; flex-direction: column; gap: 15px; padding: 20px; }
+        .service-list { list-style: none; padding: 0; margin: 0 0 30px 0; }
+        .service-list li { position: relative; padding: 12px 0 12px 25px; border-bottom: 1px solid #f9f9f9; font-size: 1.1rem; }
+        /* This creates the pink bullet point */
+        .service-list li::before { content: "•"; color: var(--primary-pink); font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; position: absolute; left: 5px; font-size: 1.5rem; top: 6px; }
 
-        .btn { 
-            text-align: center; 
-            padding: 18px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 1.1rem; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.3s;
-        }
+        .info-box { background: #fdf2f8; padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 30px; }
+        .info-box strong { display: block; color: var(--primary-pink); margin-bottom: 5px; }
 
-        .btn-call { background-color: var(--primary-pink); color: white; }
-        .btn-whatsapp { background-color: var(--whatsapp-green); color: white; }
-        .btn:active { transform: scale(0.98); }
+        .actions { display: flex; flex-direction: column; gap: 12px; }
 
-        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #888; }
+        .btn { text-align: center; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: bold; transition: 0.3s; display: block; }
+        .btn-call { background: var(--primary-pink); color: white; }
+        .btn-whatsapp { border: 2px solid var(--whatsapp-green); color: var(--whatsapp-green); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #aaa; }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="card">
     <header>
         <h1>Gibson's Nail Studio</h1>
-        <p>Premium Nail Art & Care</p>
+        <p>Expert Technician: Gibson Murombezi</p>
     </header>
 
-    <div class="services">
-        <h3>Our Services</h3>
-        <div class="service-item"><span class="service-name">Full Set Acrylic</span><span>R[Price]</span></div>
-        <div class="service-item"><span class="service-name">Gel Overlay</span><span>R[Price]</span></div>
-        <div class="service-item"><span class="service-name">Nail Art (per nail)</span><span>R[Price]</span></div>
-        <div class="service-item"><span class="service-name">Manicure & Pedicure</span><span>R[Price]</span></div>
-    </div>
+    <div class="content">
+        <h3>Services Offered</h3>
+        <ul class="service-list">
+            <li>Full Set Acrylic Tips</li>
+            <li>Gel Overlay & Polish</li>
+            <li>Professional Manicure</li>
+            <li>Relaxing Pedicure</li>
+            <li>Custom Nail Art Designs</li>
+            <li>Nail Repair & Maintenance</li>
+            <li>Safe Soak-Off Removal</li>
+        </ul>
 
-    <div class="location">
-        <strong>📍 Location</strong><br>
-        Randburg, near Powersave<br>
-        Johannesburg, South Africa
-    </div>
+        <div class="info-box">
+            <strong>📍 Location</strong>
+            Randburg, Powersave
+        </div>
 
-    <div class="contact-actions">
-        <a href="tel:+27672552758" class="btn btn-call">
-            📞 Call: +27 67 255 2758
-        </a>
-
-        <a href="https://wa.me/27672552758?text=Hi%20Gibson,%20I'd%20like%20to%20book%20a%20nail%20appointment." class="btn btn-whatsapp">
-            💬 WhatsApp Gibson
-        </a>
+        <div class="actions">
+            <a href="tel:+27672552758" class="btn btn-call">📞 Call to Book</a>
+            <a href="https://wa.me/27672552758" class="btn btn-whatsapp">💬 Message on WhatsApp</a>
+        </div>
     </div>
 
     <footer>
-        &copy; 2026 Gibson's Nail Studio. Owned by Gibson Murombezi.
+        &copy; 2026 Gibson's Nail Studio
     </footer>
 </div>
 
